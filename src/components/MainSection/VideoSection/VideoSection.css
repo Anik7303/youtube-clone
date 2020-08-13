@@ -1,0 +1,33 @@
+.video-section {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    padding: 16px;
+}
+
+.video-section__category-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(46, 45, 45);
+    margin: 16px;
+    margin-bottom: 0;
+}
+
+.video-section__category-sub-title {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgb(46, 45, 45);
+    margin: 16px;
+    margin-top: 0;
+}
+
+.video-section__video-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    /* align-items: flex-start; */
+}

@@ -1,0 +1,50 @@
+.search-section {
+    flex: 85%;
+    background: #f7f7f7;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-section > div {
+    width: 100%;
+    max-width: 900px;
+}
+
+.search-section__title {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.search-section__title > h2 {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 16px;
+}
+
+/* .search-section__channels::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: lightgray;
+    border: none;
+    margin: 16px 0;
+} */
+
+.search-section hr {
+    content: "";
+    width: 100%;
+    height: 1px;
+    border: none;
+    background: lightgray;
+    margin: 8px 0;
+}
+
+.search-section__videos-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 8px 0;
+}
