@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./ChannelItem.css";
 import VerifiedIcon from "@material-ui/icons/CheckCircle";
@@ -10,9 +11,11 @@ const ChannelItem = (props) => {
     const [subscribedState, setSubscribedState] = useState(props.subscribed);
 
     const notificationStateHandler = (event) => {
+        event.preventDefault();
         setNotificationState(!notificationState);
     };
     const subscriptionHandler = (event) => {
+        event.preventDefault();
         setSubscribedState(!subscribedState);
     };
 
@@ -22,7 +25,7 @@ const ChannelItem = (props) => {
     }
 
     return (
-        <section className="channel-section">
+        <Link className="channel-section" to={`/channel/${props.id}`}>
             <div className="channel__image">
                 <img src={props.imageUrl} alt={props.name} />
             </div>
@@ -58,7 +61,7 @@ const ChannelItem = (props) => {
                     </div>
                 )}
             </div>
-        </section>
+        </Link>
     );
 };
 

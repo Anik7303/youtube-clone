@@ -10,7 +10,109 @@ import VideoItem from "./VideoItem/VideoItem";
 // material icons
 import TuneIcon from "@material-ui/icons/Tune";
 
+/**
+ * @param {String} id Unique video identifier
+ * @param {String} title Video title
+ * @param {URL} thumbnail Still demo image of the video
+ * @param {String} description Video description
+ * @param {String} timestamp Video realse data & time transformed into days, months or years
+ * @param {String} views Totals view count
+ * @param {String} author Video creator
+ * @param {Boolean} verified Video creator status
+ *
+ * @returns {Object} returns an object formatted for VideoItem component
+ */
+const getVideoObject = (
+    id,
+    title,
+    thumbnail,
+    description,
+    timestamp,
+    views,
+    author,
+    verified = false
+) => {
+    return {
+        id: id,
+        title: title,
+        url: `/video/${id}`,
+        thumbnail: thumbnail,
+        author: author,
+        verified: verified,
+        description: description,
+        views: views,
+        timestamp: timestamp,
+    };
+};
+
 const Search = (props) => {
+    const videos = [
+        getVideoObject(
+            "1",
+            "Top 7 Developer Tools in 2020 - Every Programmer Should Know",
+            "https://i.imgur.com/lpoxQIs.png",
+            "FREE JavaScript Training ...",
+            "1 day ago",
+            "2k views",
+            "Clever Programmer",
+            true
+        ),
+        getVideoObject(
+            "2",
+            "FAST AND FURIOUS 9 Trailer (4k ULTRA HD) NEW 2020",
+            "https://i.imgur.com/IqcYa5x.png",
+            "",
+            "6 months ago",
+            "10M views",
+            "FlimSpot Trailer",
+            true
+        ),
+        getVideoObject(
+            "3",
+            "Kuyenda | AMV | Anime Mix",
+            "https://i.imgur.com/ICFjJ95.png",
+            "",
+            "3 months ago",
+            "82k views",
+            "Jasi Amvs",
+            true
+        ),
+        getVideoObject(
+            "4",
+            "How To Create A Github Profile README (NEW) // Github Tutorial: Add...",
+            "https://i.imgur.com/aVrb0TK.png",
+            "",
+            "10k views",
+            "4 weeks ago",
+            "Program With Erik",
+            true
+        ),
+        getVideoObject(
+            "5",
+            "PARAMOUNT｜新海誠作品 Makoto Shinkai Films",
+            "https://i.imgur.com/50Hile1.png",
+            "",
+            "546k views",
+            "8 months ago",
+            "なかじまNakajima",
+            true
+        ),
+        getVideoObject(
+            "6",
+            "Gryffin - Cry (Lyrics) feat. John Martin",
+            "https://i.imgur.com/5kfalgY.png",
+            "",
+            "WaveMusic",
+            "340k views",
+            "1 week ago",
+            true
+        ),
+    ];
+
+    const videoResults = videos.map((item, index) => {
+        return <VideoItem key={index} {...item} />;
+    });
+
     return (
         <section className="search-section">
             <div>
@@ -21,6 +123,7 @@ const Search = (props) => {
                 <hr />
                 <section className="search-section__channels">
                     <ChannelItem
+                        id={"channel-01"}
                         name="Clever Programmer"
                         imageUrl="https://yt3.ggpht.com/a/AATXAJydjgDHqK3vz4iHkrPZjHSsjwh1aPsqOwxHCZ_ISA=s176-c-k-c0x00ffffff-no-rj-mo"
                         subscriptions="712 subscribers"
@@ -35,15 +138,9 @@ const Search = (props) => {
                     <h2 className="search-section__videos-title">
                         Related to your search
                     </h2>
-                    <VideoItem
-                        title
-                        thumbnail
-                        author
-                        verified
-                        views
-                        timestamp
-                        description
-                    />
+                    <ul className="search-section__video-list">
+                        {videoResults}
+                    </ul>
                 </section>
             </div>
         </section>

@@ -20,6 +20,7 @@ const Layout = (props) => {
                         path="/search/:searchInput"
                         render={(props) => <Search {...props} />}
                     />
+                    <Route exact path="/video/:id" component={Search} />
                     <Redirect to="/" />
                 </Switch>
             </main>

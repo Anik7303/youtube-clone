@@ -1,0 +1,64 @@
+.search-result__video {
+    display: flex;
+    flex-direction: row;
+    margin: 8px 0 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.search-result__video-thumbnail {
+    width: 250px;
+    max-width: 250px;
+}
+
+.search-result__video-thumbnail > img {
+    width: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+.search-result__video-info {
+    width: calc(100% - 266px);
+    margin: 0;
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #555555;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.search-result__video-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.search-result__video-info > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.search-result__video-author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-result__video-author > .icon {
+    font-size: 14px !important;
+    color: gray;
+    margin: 0;
+    margin-left: 2px;
+}
+
+.search-result__video-stats {
+    margin: 0;
+    margin-left: 8px;
+}

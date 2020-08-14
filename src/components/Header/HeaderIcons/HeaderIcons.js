@@ -12,7 +12,7 @@ const HeaderIcons = (props) => {
             <VideoCallIcon className="header__icon" />
             <AppsIcon className="header__icon" />
             <NotificationsIcon className="header__icon" />
-            <Avatar />
+            <Avatar src="https://yt3.ggpht.com/a/AATXAJydjgDHqK3vz4iHkrPZjHSsjwh1aPsqOwxHCZ_ISA=s176-c-k-c0x00ffffff-no-rj-mo" />
         </section>
     );
 };

@@ -13,7 +13,13 @@
     flex: 1;
     width: 100%;
     border: none;
-    /* outline: none; */
+    outline: none;
+    border: 1px solid transparent;
+}
+
+.header__input > input:focus {
+    background: #fafafa;
+    border: 1px solid gray;
 }
 
 .header__input--action {
