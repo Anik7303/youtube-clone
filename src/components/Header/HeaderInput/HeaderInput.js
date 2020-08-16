@@ -19,9 +19,13 @@ const HeaderInput = (props) => {
             />
             <Link
                 className="header__input--action"
-                to={`/search/${searchInput}`}
+                // to={`/search/${searchInput}`}
+                to={{
+                    pathname: "/result",
+                    search: `search_query=${encodeURI(searchInput)}`,
+                }}
             >
-                <SearchIcon fontSize="small" />
+                <SearchIcon className="icon" fontSize="small" />
             </Link>
             {/* <div className="header__input--action">
                 <SearchIcon fontSize="small" />

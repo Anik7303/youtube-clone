@@ -1,7 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
+
+// css stylesheets
 import "./index.css";
+
+// components
 import App from "./components/App/App";
+
+// service worker
 import * as serviceWorker from "./serviceWorker";
 
 const element = (

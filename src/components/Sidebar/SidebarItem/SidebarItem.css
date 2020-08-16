@@ -6,6 +6,8 @@
     align-items: center;
     padding: 8px 16px;
     cursor: pointer;
+    color: #000000;
+    text-decoration: none;
 }
 
 .sidebar__item:hover,

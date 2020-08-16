@@ -1,6 +1,9 @@
 import React from "react";
 
+// css stylesheets
 import "./Sidebar.css";
+
+// components
 import SidebarItem from "./SidebarItem/SidebarItem";
 
 // material icons
@@ -23,21 +26,29 @@ const Sidebar = (props) => {
         {
             name: "",
             list: [
-                { title: "Home", icon: HomeIcon },
-                { title: "Trending", icon: WhatshotIcon },
-                { title: "Subscription", icon: SubscriptionsIcon },
+                { title: "Home", icon: HomeIcon, link: "/" },
+                {
+                    title: "Trending",
+                    icon: WhatshotIcon,
+                    link: "/feed/trending",
+                },
+                {
+                    title: "Subscription",
+                    icon: SubscriptionsIcon,
+                    link: "/feed/subscriptions",
+                },
             ],
             limit: -1,
         },
         {
             name: "",
             list: [
-                { title: "Library", icon: VideoLibraryIcon },
-                { title: "History", icon: HistoryIcon },
-                { title: "Your Videos", icon: OndemandVideoIcon },
-                { title: "Watch Later", icon: WatchLaterIcon },
-                { title: "Liked Videos", icon: ThumbUpIcon },
-                { title: "Show more", icon: ExpandMoreOutlinedIcon },
+                { title: "Library", icon: VideoLibraryIcon, link: "/library" },
+                { title: "History", icon: HistoryIcon, link: "/history" },
+                { title: "Your Videos", icon: OndemandVideoIcon, link: "/" },
+                { title: "Watch Later", icon: WatchLaterIcon, link: "/" },
+                { title: "Liked Videos", icon: ThumbUpIcon, link: "/" },
+                // { title: "Show more", icon: ExpandMoreOutlinedIcon, link: "/" },
             ],
             limit: 5,
         },
@@ -49,20 +60,20 @@ const Sidebar = (props) => {
         {
             name: "More from youtube",
             list: [
-                { title: "Gaming", icon: VideogameAssetIcon },
-                { title: "Live", icon: HomeIcon },
-                { title: "Fashion & Beauty", icon: HomeIcon },
-                { title: "Learing", icon: HomeIcon },
+                { title: "Gaming", icon: VideogameAssetIcon, link: "/" },
+                { title: "Live", icon: HomeIcon, link: "/" },
+                { title: "Fashion & Beauty", icon: HomeIcon, link: "/" },
+                { title: "Learing", icon: HomeIcon, link: "/" },
             ],
             limit: -1,
         },
         {
             name: "",
             list: [
-                { title: "Settings", icon: SettingsIcon },
-                { title: "Report history", icon: HistoryIcon },
-                { title: "Help", icon: HelpIcon },
-                { title: "Send feedback", icon: FeedbackIcon },
+                { title: "Settings", icon: SettingsIcon, link: "/" },
+                { title: "Report history", icon: HistoryIcon, link: "/" },
+                { title: "Help", icon: HelpIcon, link: "/" },
+                { title: "Send feedback", icon: FeedbackIcon, link: "/" },
             ],
             limit: -1,
         },
@@ -77,6 +88,7 @@ const Sidebar = (props) => {
                             key={index}
                             icon={listItem.icon}
                             title={listItem.title}
+                            link={listItem.link}
                         />
                     ))}
                 </ul>

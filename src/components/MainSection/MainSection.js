@@ -1,6 +1,9 @@
 import React from "react";
 
+// css stylesheets
 import "./MainSection.css";
+
+// components
 import VideoSection from "./VideoSection/VideoSection";
 
 const MainSection = (props) => {

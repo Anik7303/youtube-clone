@@ -1,16 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
-import "./App.scss";
+// components
 import Layout from "../Layout/Layout";
 
 function App() {
     return (
-        <Router basename="/">
-            <div className="app">
+        <div className="app">
+            <Router basename="/youtube-clone/">
                 <Layout />
-            </div>
-        </Router>
+            </Router>
+        </div>
     );
 }
 
